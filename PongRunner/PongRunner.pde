@@ -10,7 +10,7 @@ void setup()
 }
 void draw()
 { 
-  background(18,18,240); 
+  background(#000000); 
   bob.move(); 
   bob.show();
   paddle.show();

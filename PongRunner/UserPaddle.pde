@@ -3,29 +3,25 @@ class UserPaddle
   int y;
 UserPaddle()
 {
-  y=50;
+  y=175;
 }
 void move()
 {
   if(key==CODED)
   {
-    if (keyCode== UP)
+    if (keyCode== UP || y>345)
       y-=5;
-    if (keyCode== DOWN)
+    if (keyCode== DOWN || y<0)
       y+=5;  
   }
 
 }
 void show()
 {
-  fill(#EDFF00);
+  fill(#0EFF03);
   rect(580, y, 10, 50);
 }
-int getX()
-{
-  return 580;
-}
-int getY()
+int getUserY()
 {
   return y;
 }

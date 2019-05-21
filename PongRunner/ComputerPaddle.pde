@@ -1,14 +1,15 @@
 class ComputerPaddle
 {
-  int x, y;
+  int x, y, yvel;
 ComputerPaddle()
 {
-  y = 250;
+  y = 90;
   x = 10;
+  yvel = 10;
 }
 void show()
 {
-  fill(#EDFF00);
-  rect(x, y, 10, 50);
+  fill(#0EFF03);
+  rect(x, y, 10, 220);
 }
 }
