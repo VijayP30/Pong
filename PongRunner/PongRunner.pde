@@ -4,7 +4,7 @@ UserTwoPaddle userTwo;
 Middle mid;
 void setup()
 {
-  bob = new Ball(300,300);
+  bob = new Ball();
   user = new UserPaddle();
   userTwo = new UserTwoPaddle();
   mid = new Middle();
@@ -17,9 +17,11 @@ void draw()
   rect(0,0,900,5);
   rect(0,595,900,5);
   mid.show();
-  bob.startGame(10,4);
+  //bob.startGame(10,4);
+  bob.easyOrHard();
   bob.move(); 
   bob.show();
+  //bob.changeBallColor();
   bob.showScore();
   user.move();
   user.show();

@@ -6,16 +6,16 @@ class Ball
   int cScore,uScore;
   int winScore=5;
   String name="Pong";
-  String start="Press Enter To Begin";
+  String start="Press e for Easy or h for Hard";
   String rules="UP and Down Arrows for right side and W and S Keys for left side";
   char restart;
-Ball(int X, int Y)
+Ball()
 {
-  x = X;//20
-  y = Y; //30
+  x = 300;//20
+  y = 300; //30
 }
-void startGame(int Xvel,int Yvel)
-{
+void easyOrHard()
+{ 
   fill(#FF0000);
   textSize(60);
   text(name,375,100);
@@ -23,15 +23,41 @@ void startGame(int Xvel,int Yvel)
   text(start,255,500);
   textSize(18);
   text(rules,175,550);
-  if(key==ENTER)
+  if(key=='e')
   {
-      bob.xvel=Xvel;
-      bob.yvel=Yvel;
-      start="";
-      rules="";
-      name="";
+    bob.xvel=8;
+    bob.yvel=4;
+    start="";
+    rules="";
+    name="";
+  }
+  if(key=='h')
+  {
+    bob.xvel=10;
+    bob.yvel=6;
+    start="";
+    rules="";
+    name="";
   }
 }
+//void startGame(int Xvel,int Yvel)
+//{
+//  fill(#FF0000);
+//  textSize(60);
+//  text(name,375,100);
+//  textSize(40);
+//  text(start,255,500);
+//  textSize(18);
+//  text(rules,175,550);
+//  if(key==ENTER)
+//  {
+//      bob.xvel=Xvel;
+//      bob.yvel=Yvel;
+//      start="";
+//      rules="";
+//      name="";
+//  }
+//}
 void move()
 {
   if((x>885&&y>user.y&&y<user.y+50)||(x<15&&y>userTwo.y&&y<userTwo.y+50)) //x>585
@@ -108,4 +134,13 @@ void gameOverPage(String x)
       //bobTwo.y=300;
   }
 }
+//void changeBallColor()
+//{ 
+//  fill(#0EFF03);
+//  if(bob.x==450)
+//  {
+//    fill((float)(Math.random()*255),(float)(Math.random()*255),(float)(Math.random()*255));
+//    bob.show();
+//  }
+//}
 }
