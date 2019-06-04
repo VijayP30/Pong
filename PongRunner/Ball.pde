@@ -20,7 +20,7 @@ void easyOrHard()
   textSize(60);
   text(name,375,100);
   textSize(40);
-  text(start,255,500);
+  text(start,175,500);
   textSize(18);
   text(rules,175,550);
   if(key=='e')
