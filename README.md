@@ -1,4 +1,4 @@
-# FinalProject
+# High School - FinalProject
 # Pong - a fun pong liked game where one or two users can enjoy a remake of a classic by hitting a ball back and forth.
 
    My project is a pong like game. It has a starting page in which allows the user to pick easy or hard mode which would adjust the speed of the ball in both the x axis and y axis. The user(s) will use either the up and down arrow keys or the w and s arrow keys. If the ball hits the users' paddles, the ball will change direction. If the ball goes past the paddles and hits the black, the score counter will increment by one. Once the score hits winning score which is 5 in this case, then the game will end and prompt a restart to the game.
